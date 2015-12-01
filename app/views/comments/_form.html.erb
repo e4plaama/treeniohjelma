@@ -1,13 +1,12 @@
+<table>
 <%= form_for([@article, @article.comments.build]) do |f| %>
+</table>
   <p>
-    <%= f.label :commenter %><br>
-    <%= f.text_field :commenter %>
+    <%= f.label :vaihe %><br>
+    <%= f.text_area :vaihe %>
   </p>
   <p>
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
-  </p>
-  <p>
-    <%= f.submit %>
+    <%= f.submit "Lisää vaihe" %>
+    <%= f.submit "Tallenna muutokset" %>
   </p>
 <% end %>

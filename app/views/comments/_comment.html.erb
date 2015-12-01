@@ -1,14 +1,15 @@
 <p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
- 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
-<p>
-  <%= link_to 'Destroy Comment', [comment.article, comment],
-               method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+  <tr>
+	<td>
+	  <%= comment.vaihe %>
+	</td>
+	<td><%= link_to 'Näytä', [comment.article, comment] %></td>
+	<td><%= link_to 'Muokkaa', [comment.article, comment] %></td>
+	<td>
+	  <%= link_to 'Poista', [comment.article, comment],
+				method: :delete,
+				data: { confirm: 'Oletko varma?' } %>
+	</td>
+  </tr>
+</table>
 </p>
