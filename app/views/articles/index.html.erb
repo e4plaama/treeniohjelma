@@ -1,7 +1,8 @@
-<h1>Viikko-ohjelma krekjrefjkfkjrekjfkjerkj</h1>
+<h1>Urheilijan viikko-ohjelma</h1>
 
 <%= link_to 'Luo uusi harjoitus', new_article_path %>
- 
+
+<p>
 <% if @articles.exists?(:day => "Maanantai") %>
 		<h2>Maanantai</h2>
 		<table>
@@ -14,19 +15,21 @@
 			<tr>
 			  <td><%= article.title %></td>
 			  <td><%= article.text %></td>
-			  <td><%= link_to 'Show', article_path(article) %></td>
-			  <td><%= link_to 'Edit', edit_article_path(article) %></td>
-			  <td><%= link_to 'Destroy', article_path(article),
+			  <td><%= link_to 'Näytä', article_path(article) %></td>
+			  <td><%= link_to 'Muokkaa', edit_article_path(article) %></td>
+			  <td><%= link_to 'Poista', article_path(article),
 					  method: :delete,
-					  data: { confirm: 'Are you sure?' } %></td>
+					  data: { confirm: 'Oletko varma?' } %></td>
 			</tr>
 			<% end %>
 		</table>
 <% else %>
 <h2>Maanantai</h2>
-<h3>Ei harjoituksia!</h3>
+<h4>Ei harjoituksia!</h4>
 <% end %>
+</p>
 
+<p>
 <% if @articles.exists?(:day => "Tiistai") %>
 	<h2>Tiistai</h2>
 	<table>
@@ -39,19 +42,21 @@
 		<tr>
 		  <td><%= article.title %></td>
 		  <td><%= article.text %></td>
-		  <td><%= link_to 'Show', article_path(article) %></td>
-		  <td><%= link_to 'Edit', edit_article_path(article) %></td>
-		  <td><%= link_to 'Destroy', article_path(article),
+		  <td><%= link_to 'Näytä', article_path(article) %></td>
+		  <td><%= link_to 'Muokkaa', edit_article_path(article) %></td>
+		  <td><%= link_to 'Poista', article_path(article),
 				  method: :delete,
-				  data: { confirm: 'Are you sure?' } %></td>
+				  data: { confirm: 'Oletko varma?' } %></td>
 		</tr>
 		<% end %>
 	</table>	
 <% else %>
 <h2>Tiistai</h2>
-<h3>Ei harjoituksia!</h3>
+<h4>Ei harjoituksia!</h4>
 <% end %>
+</p>
 
+<p>
 <% if @articles.exists?(:day => "Keskiviikko") %>
 <h2>Keskiviikko</h2>
 <table>
@@ -64,19 +69,21 @@
 	<tr>
 	  <td><%= article.title %></td>
 	  <td><%= article.text %></td>
-	  <td><%= link_to 'Show', article_path(article) %></td>
-	  <td><%= link_to 'Edit', edit_article_path(article) %></td>
-	  <td><%= link_to 'Destroy', article_path(article),
+	  <td><%= link_to 'Näytä', article_path(article) %></td>
+	  <td><%= link_to 'Muokkaa', edit_article_path(article) %></td>
+	  <td><%= link_to 'Poista', article_path(article),
 			  method: :delete,
-			  data: { confirm: 'Are you sure?' } %></td>
+			  data: { confirm: 'Oletko varma?' } %></td>
 	</tr>
 	<% end %>
 </table>
 <% else %>
 <h2>Keskiviikko</h2>
-<h3>Ei harjoituksia!</h3>
+<h4>Ei harjoituksia!</h4>
 <% end %>
+</p>
 
+<p>
 <% if @articles.exists?(:day => "Torstai") %>
 <h2>Torstai</h2>
 <table>
@@ -89,20 +96,21 @@
 	<tr>
 	  <td><%= article.title %></td>
 	  <td><%= article.text %></td>
-	  <td><%= link_to 'Show', article_path(article) %></td>
-	  <td><%= link_to 'Edit', edit_article_path(article) %></td>
-	  <td><%= link_to 'Destroy', article_path(article),
+	  <td><%= link_to 'Näytä', article_path(article) %></td>
+	  <td><%= link_to 'Muokkaa', edit_article_path(article) %></td>
+	  <td><%= link_to 'Poista', article_path(article),
 			  method: :delete,
-			  data: { confirm: 'Are you sure?' } %></td>
+			  data: { confirm: 'Oletko varma?' } %></td>
 	</tr>
 	<% end %>
 </table>
 <% else %>
 <h2>Torstai</h2>
-<h3>Ei harjoituksia!</h3>
+<h4>Ei harjoituksia!</h4>
 <% end %>
+</p>
 
-
+<p>
 <% if @articles.exists?(:day => "Perjantai") %>
 <h2>Perjantai</h2>
 <table>
@@ -115,19 +123,21 @@
 	<tr>
 	  <td><%= article.title %></td>
 	  <td><%= article.text %></td>
-	  <td><%= link_to 'Show', article_path(article) %></td>
-	  <td><%= link_to 'Edit', edit_article_path(article) %></td>
-	  <td><%= link_to 'Destroy', article_path(article),
+	  <td><%= link_to 'Näytä', article_path(article) %></td>
+	  <td><%= link_to 'Muokkaa', edit_article_path(article) %></td>
+	  <td><%= link_to 'Poista', article_path(article),
 			  method: :delete,
-			  data: { confirm: 'Are you sure?' } %></td>
+			  data: { confirm: 'Oletko varma?' } %></td>
 	</tr>
 	<% end %>
 </table>
 <% else %>
 <h2>Perjantai</h2>
-<h3>Ei harjoituksia!</h3>
+<h4>Ei harjoituksia!</h4>
 <% end %>
+</p>
 
+<p>
 <% if @articles.exists?(:day => "Lauantai") %>
 <h2>Lauantai</h2>
 <table>
@@ -140,19 +150,21 @@
 	<tr>
 	  <td><%= article.title %></td>
 	  <td><%= article.text %></td>
-	  <td><%= link_to 'Show', article_path(article) %></td>
-	  <td><%= link_to 'Edit', edit_article_path(article) %></td>
-	  <td><%= link_to 'Destroy', article_path(article),
+	  <td><%= link_to 'Näytä', article_path(article) %></td>
+	  <td><%= link_to 'Muokkaa', edit_article_path(article) %></td>
+	  <td><%= link_to 'Poista', article_path(article),
 			  method: :delete,
-			  data: { confirm: 'Are you sure?' } %></td>
+			  data: { confirm: 'Oletko varma?' } %></td>
 	</tr>
 	<% end %>
 </table>
 <% else %>
 <h2>Lauantai</h2>
-<h3>Ei harjoituksia!</h3>
+<h4>Ei harjoituksia!</h4>
 <% end %>
+</p>
 
+<p>
 <% if @articles.exists?(:day => "Sunnuntai") %>
 <h2>Sunnuntai</h2>
 <table>
@@ -165,15 +177,16 @@
 	<tr>
 	  <td><%= article.title %></td>
 	  <td><%= article.text %></td>
-	  <td><%= link_to 'Show', article_path(article) %></td>
-	  <td><%= link_to 'Edit', edit_article_path(article) %></td>
-	  <td><%= link_to 'Destroy', article_path(article),
+	  <td><%= link_to 'Näytä', article_path(article) %></td>
+	  <td><%= link_to 'Muokkaa', edit_article_path(article) %></td>
+	  <td><%= link_to 'Poista', article_path(article),
 			  method: :delete,
-			  data: { confirm: 'Are you sure?' } %></td>
+			  data: { confirm: 'Oletko varma?' } %></td>
 	</tr>
 	<% end %>
 </table>
 <% else %>
 <h2>Sunnuntai</h2>
-<h3>Ei harjoituksia!</h3>
+<h4>Ei harjoituksia!</h4>
 <% end %>
+</p>
